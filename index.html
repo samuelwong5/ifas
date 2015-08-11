@@ -100,7 +100,7 @@
                 <p>IFAS (Information Feed Analysis System) is a project sponsored by HKCERT and developed by HKCERT and CSIRT Foundry</p>
                 <p>IFAS is designed to gather security event logs from many public sources, normalise them to similarly-structured event data, store them, and allow searching and analysis of events.</p>
             </div>
-            <br><br><br><br><br>
+            <br>
                 <a id="qstbtn" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-screenshot"></i> What can it do?</span></a>
         </div>
     </section>
@@ -110,7 +110,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>IFAS can answer these questions:</h2>
-                <div style="text-align: left;font-size:150%;padding-bottom:50px;padding-top:50px"> 
+                <div class="q-table"> 
                 <ul>
                 <li>How many phishing attacks against Australia were recorded in the last 3 months?</li>
                 <li>Which ISP in Peru has the highest number of drones?</li>
@@ -131,12 +131,11 @@
         <h3>The Architecture of IFAS</h3>
 
         <a id="archtogglebtn" class="btn btn-default btn-lg"> <span class="network-name"><i class="glyphicon glyphicon-blackboard"></i> Show Diagram</span></a><br><br>
-        <div id="archdia" style="display: none">
-            <img src="img/ifas_arch.jpg" height="400">
+        <div id="archdia" style="display: none; width=80%">
+            <img src="img/ifas_arch.jpg" class="arch-dia">
         </div>
         <div id="archdet">
-          <table class="table">
-          <br><br><br>
+          <table class="table arch-table">
           <tbody>
             <tr>
               <td><b><i class="glyphicon glyphicon-wrench"></i>  TOOL  (<a id="licenselink">LICENSES</a>)</b></td>
@@ -163,8 +162,7 @@
             </tr>
           </tbody>
           </table>
-          <br>
-          <h3> All the data is stored LOCALLY!</h3>
+          <h4> All the data is stored LOCALLY!</h4>
         </div>
 
         </div>
@@ -188,33 +186,33 @@
         <!-- Wrapper for slides -->
         <div id="topkek" class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="center-block" src="img/ifas_today.jpg" height="400">
+                <img class="usage-img center-block" src="img/ifas_today.jpg">
                 <div class="carousel-caption">
-                    <h2>Get a sense of today's events</h2>
+                    <h6>Get a sense of today's events</h6>
                 </div>
             </div>
             <div class="item">
-                <img class="center-block" src="img/ifas_log.jpg" height="400">
+                <img class="usage-img center-block" src="img/ifas_log.jpg">
                 <div class="carousel-caption">
-                    <h2>Search logs for detailed data</h2>
+                    <h6>Search logs for detailed data</h6>
                 </div>
             </div>
             <div class="item">
-                <img class="center-block" src="img/ifas_statistics.jpg" height="400">
+                <img class="usage-img center-block" src="img/ifas_statistics.jpg">
                 <div class="carousel-caption">
-                    <h2>Statistical Analysis - see the Trends and Distributions</h2>
+                    <h6>Statistical Analysis - see the Trends and Distributions</h6>
                 </div>
             </div>
             <div class="item">
-                <img class="center-block" src="img/ifas_alert.jpg" height="400">
+                <img class="usage-img center-block" src="img/ifas_alert.jpg">
                 <div class="carousel-caption">
-                    <h2>Receive alerts from selected organizations</h2>
+                    <h6>Receive alerts from selected organizations</h6>
                 </div>
             </div>
             <div class="item">
-                <img class="img-responsive center-block" src="img/ifas_dash.jpg" height="400">
+                <img class="usage-img center-block" src="img/ifas_dash.jpg">
                 <div class="carousel-caption">
-                    <h2>Dashboard - Manage situations real-time</h2>
+                    <h6>Dashboard - Manage situations real-time</h6>
                 </div>
             </div>
         </div>
@@ -235,7 +233,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Licenses</h2>
                 <br><br><br>
-                <p>Components of IFAS, including the IFAS Reporter web interface and<br> IFAS Alerter, are released under the Apache License 2.0.</p>
+                <p>Components of IFAS, including the IFAS Reporter web interface and IFAS Alerter, are released under the Apache License 2.0.</p>
                 <a href="https://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-file"></i> Apache License 2.0</a>
                 <br><br><br><br><br>
                 <p>Other software components are used under their respective licenses.</p>
@@ -275,10 +273,40 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-code"></i> Development</a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-power-off"></i> System Requirements</a>
                             </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse">
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">       
+                            <table class="table">
+                            <tbody>
+                            <tr>
+                                <td rowspan=2>Memory</td>
+                                <td>Production: 8-16 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Development: 4 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Processor</td>
+                                <td>Multi-core machine (4+ recommended)</td>
+                            </tr>
+                            <tr>
+                                <td>Virtual Environment</td>
+                                <td>Supported</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class="fa fa-code"></i> Development</a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
                             <p>IFAS development continues with the work of the following teams and individuals:</p>
                             <table class="table">
@@ -300,38 +328,7 @@
                         </div>
                         </div>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class="fa fa-power-off"></i> System Requirements</a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse">
-                            <div class="panel-body">
-                            <div class="table-responsive">          
-                            <table class="table">
-                            <tbody>
-                            <tr>
-                                <td rowspan=2>Memory</td>
-                                <td>Production: 8-16 GB</td>
-                            </tr>
-                            <tr>
-                                <td>Development: 4 GB</td>
-                            </tr>
-                            <tr>
-                                <td>Processor</td>
-                                <td>Multi-core machine (4+ recommended)</td>
-                            </tr>
-                            <tr>
-                                <td>Virtual Environment</td>
-                                <td>Supported</td>
-                            </tr>
-                            </tbody>
-                            </table>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
