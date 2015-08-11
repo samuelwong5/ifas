@@ -68,6 +68,9 @@
                     <li>
                         <a class="page-scroll" href="#contact"><i class="glyphicon glyphicon-question-sign"></i> Contact</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="" data-toggle="modal" data-target="#myModal" id="adj-bright"><i class="glyphicon glyphicon-cog dropdown-toggle"></i><div class="show-small"> Settings</div></a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -75,6 +78,34 @@
         <!-- /.container -->
     </nav>
 
+    <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog" style="color:rgb(100,100,100);">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Settings</h4>
+      </div>
+      <div class="modal-body">
+        <i class="glyphicon glyphicon-adjust"></i> Brightness <br>
+        <div id="range-li" class="range">
+            <input id="range" type="range" min="0" max="200" step="1" value="0">
+        </div>
+        <br>
+        <i class="glyphicon glyphicon-new-window"></i> Misc.
+        <div class="checkbox">
+            <label class="dd-menu"><input type="checkbox" value="" checked="checked">Open links in new tabs</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
     <!-- Intro Header -->
     <header class="intro">
         <div class="intro-body">
@@ -128,7 +159,7 @@
         <div class="col-lg-8 col-lg-offset-2">
     
 
-        <h3>The Architecture of IFAS</h3>
+        <h2>The Architecture of IFAS</h2>
 
         <a id="archtogglebtn" class="btn btn-default btn-lg"> <span class="network-name"><i class="glyphicon glyphicon-blackboard"></i> Show Diagram</span></a><br><br>
         <div id="archdia" style="display: none; width=80%">
@@ -276,7 +307,7 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-power-off"></i> System Requirements</a>
                             </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse accord">
+                        <div id="collapseOne" class="panel-collapse collapse in">
                             <div class="panel-body">       
                             <table class="table">
                             <tbody>
@@ -399,8 +430,17 @@
         $('html,body').animate({scrollTop: $("#questions").offset().top - 40}, 500);
     });
     $("#licenselink").click(function(){
-        $('html,body').animate({scrollTop: $("#license").offset().top - 40}, 700);
+        $('html,body').animate({scrollTop: $("#license").offset().top - 40}, 700)});
+    $("#range").change( function(e){
+        var rgb = $(this).val();
+        var triple = rgb.toString() + ","  + rgb.toString() + "," + rgb.toString();
+        var rgb_text = "rgb("+ triple + ")";
+        $("body").css("background-color", rgb_text); 
+        $(".range").css("background-color", rgb_text); 
+        $(".carousel-control.left").css("background-image", "linear-gradient(to right,rgba(" + triple + ",.5) 0,rgba(0,0,0,.0001) 100%)"); 
+        $(".carousel-control.right").css("background-image", "linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(" + triple + ",.5) 100%)"); 
     });
+    
     </script>
 
 </body>
