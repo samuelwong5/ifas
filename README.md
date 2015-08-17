@@ -2,7 +2,7 @@
 
 Alternative design for http://ifas.io. Uses Bootstrap's CSS/JS libraries and requires jQuery 1.9.1 or above. 
 
-Visit the static website hosted using github at http://samuelwong5.github.io/ifas_html 
+Visit the static website hosted using github at http://samuelwong5.github.io/ifas
 
 ## Bugs and Issues
 
